@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "455040107663",
+    "project_id": "paylord-3a9f8",
+    "storage_bucket": "paylord-3a9f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455040107663:android:eb3fd8ca57f5a8491c1cfa",
+        "android_client_info": {
+          "package_name": "com.agu.paylord.paylord"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455040107663-fmamvhhnr7l84b1efrgrt2ffm0ij2b7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWOixC0ZPsdfkd6l3VCBiGJGAOmnCGu_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455040107663-fmamvhhnr7l84b1efrgrt2ffm0ij2b7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
