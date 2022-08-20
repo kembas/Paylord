@@ -32,8 +32,10 @@ class _MyProfile extends State<MyProfile> {
               height: 120,
               child: Column(
                 children: [
+                  SizedBox(
+                    width: 10,
+                  ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                      Icon(
                        Icons.person_outline,
@@ -50,7 +52,7 @@ class _MyProfile extends State<MyProfile> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(width: 60),
+                      SizedBox(width: 170),
                       Icon(
                         Icons.arrow_forward_ios_outlined,
                         color: Colors.black,
@@ -116,13 +118,19 @@ class _MyProfile extends State<MyProfile> {
 
             Align(
                alignment: Alignment.centerLeft,
-              child: Text(
-                "Security",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                )
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Security",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                  )
+                ),
               ),
+            ),
+            SizedBox(
+              height: 0.01,
             ),
 
 
@@ -138,15 +146,17 @@ class _MyProfile extends State<MyProfile> {
               child: Column(
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(
                         Icons.fingerprint_outlined,
                         color: Colors.teal,
                         size: 40,
                       ),
                       SizedBox(
-                        width: 1,
+                        width: 10,
                       ),
                       Text(
                         "Touch ID/ Face ID",
@@ -155,7 +165,7 @@ class _MyProfile extends State<MyProfile> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(width: 60),
+                      SizedBox(width: 90),
                       Icon(
                         Icons.arrow_forward_ios_outlined,
                         color: Colors.black,
@@ -244,16 +254,19 @@ class _MyProfile extends State<MyProfile> {
 
             Align(
               alignment: Alignment.centerLeft,
-              child: Text(
-                  "Others",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  )
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                    "Others",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                    ),
+                ),
               ),
             ),
             SizedBox(
-              height: 2,
+              height: 0.01,
             ),
 
 
@@ -267,15 +280,17 @@ class _MyProfile extends State<MyProfile> {
               child: Column(
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      SizedBox(
+                        width: 10,
+                      ),
                       Icon(
                         Icons.admin_panel_settings_rounded,
                         color: Colors.indigo,
                         size: 40,
                       ),
                       SizedBox(
-                        width: 1,
+                        width: 10,
                       ),
                       Text(
                         "About",
@@ -284,7 +299,7 @@ class _MyProfile extends State<MyProfile> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(width: 60),
+                      SizedBox(width: 185),
                       Icon(
                         Icons.arrow_forward_ios_outlined,
                         color: Colors.black,
@@ -322,7 +337,7 @@ class _MyProfile extends State<MyProfile> {
                       SizedBox(width: 10),
                       Icon(
                         Icons.terminal_outlined,
-                        color: Colors.black,
+                        color: Colors.green,
                         size: 40,
                       ),
                       SizedBox(width: 10),
@@ -346,7 +361,7 @@ class _MyProfile extends State<MyProfile> {
                       SizedBox(width: 10),
                       Icon(
                         Icons.account_box_outlined,
-                        color: Colors.black,
+                        color: Colors.orange,
                         size: 40,
                       ),
                       SizedBox(width: 10),
@@ -443,7 +458,7 @@ class _MyProfile extends State<MyProfile> {
 
             ),
             SizedBox(
-              height: 10,
+              height: 0.7,
             ),
 
 
@@ -453,23 +468,20 @@ class _MyProfile extends State<MyProfile> {
                   borderRadius:  BorderRadius.circular(20),
                   color: Colors.white,
               ),
-              height: 35,
+              height: 40,
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-
-                      Center(
-                        child: Text(
-                          "Sign Out",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                          ),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "Sign Out",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
                         ),
                       ),
-                    ],
+                    ),
                   ),
                 ],
               ),

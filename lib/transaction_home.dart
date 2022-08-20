@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:paylord/profile/profile_screen.dart';
 import 'package:paylord/transaction_history.dart';
 
+import 'Buy_airtime.dart';
+
 class TransactionHome extends StatefulWidget {
   const TransactionHome({
     Key? key,
@@ -231,6 +233,7 @@ class _TransactionHome extends State<TransactionHome> {
               ],
             ),
             SizedBox(height: 5),
+
             Container(
               margin: EdgeInsets.all(10),
               height: 223,
@@ -293,11 +296,16 @@ class _TransactionHome extends State<TransactionHome> {
                                 Icons.phone_outlined,
                                 color: Colors.lightBlue,
                               ),
-                              Text(
-                                "Buy Airtime",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 17,
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Buyairtime ()));
+                                },
+                                child: Text(
+                                  "Buy Airtime",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17,
+                                  ),
                                 ),
                               ),
                             ],
