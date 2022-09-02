@@ -135,12 +135,11 @@ class _MyProfile extends State<MyProfile> {
 
 
 
-
             Container(
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                  borderRadius:  BorderRadius.circular(20),
-                  color: Colors.white,
+                borderRadius:  BorderRadius.circular(20),
+                color: Colors.white,
               ),
               height: 160,
               child: Column(
@@ -251,6 +250,7 @@ class _MyProfile extends State<MyProfile> {
 
 
             ),
+
 
             Align(
               alignment: Alignment.centerLeft,
