@@ -1,9 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:paylord/profile/profile_screen.dart';
 import 'package:paylord/transaction_history.dart';
-
+import 'package:paylord/Betting.dart';
+import 'Fund.dart';
 import 'Buy_airtime.dart';
+import 'Buy_data.dart';
+import 'Electricity.dart';
 
 class TransactionHome extends StatefulWidget {
   const TransactionHome({
@@ -19,7 +21,6 @@ class _TransactionHome extends State<TransactionHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey,
-
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -29,8 +30,7 @@ class _TransactionHome extends State<TransactionHome> {
             Container(
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white),
+                  borderRadius: BorderRadius.circular(5), color: Colors.white),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -75,27 +75,33 @@ class _TransactionHome extends State<TransactionHome> {
                     size: 35,
                   ),
                   GestureDetector(
-                    child: Icon(
-                      Icons.notifications_active,
-                      color: Colors.black,
-                      size: 35,
-                    ),
+                      child: Icon(
+                        Icons.notifications_active,
+                        color: Colors.black,
+                        size: 35,
+                      ),
                       onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => MyProfile()));
-    }
-    ),
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyProfile()));
+                      }
+                      ),
                 ],
               ),
             ),
             SizedBox(height: 10),
             GestureDetector(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Transactionhistory()));
-                },
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Transactionhistory()));
+              },
               child: Container(
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(5),
                   color: Colors.white,
                 ),
                 child: Row(
@@ -125,7 +131,7 @@ class _TransactionHome extends State<TransactionHome> {
                   margin: EdgeInsets.all(10),
                   height: 180,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(5),
                     color: Colors.white,
                   ),
                   child: Column(
@@ -177,21 +183,29 @@ class _TransactionHome extends State<TransactionHome> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.arrow_downward_outlined,
-                                color: Colors.blueAccent,
-                                size: 30,
-                              ),
-                              Text(
-                                "Fund",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Fund()));
+                            },
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.archive_sharp,
+                                  color: Colors.blueAccent,
+                                  size: 30,
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  "Fund",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           Column(
                             children: [
@@ -233,13 +247,11 @@ class _TransactionHome extends State<TransactionHome> {
               ],
             ),
             SizedBox(height: 5),
-
             Container(
               margin: EdgeInsets.all(10),
               height: 223,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white),
+                  borderRadius: BorderRadius.circular(5), color: Colors.white),
               child: Column(
                 children: [
                   Center(
@@ -253,6 +265,7 @@ class _TransactionHome extends State<TransactionHome> {
                             fontSize: 22,
                           ),
                         ),
+
                         SizedBox(height: 60),
                         Row(
                           children: [
@@ -290,41 +303,52 @@ class _TransactionHome extends State<TransactionHome> {
                             ),
                           ),
                           SizedBox(height: 10),
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.phone_outlined,
-                                color: Colors.lightBlue,
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Buyairtime ()));
-                                },
-                                child: Text(
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Buyairtime()));
+                            },
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.phone_outlined,
+                                  color: Colors.lightBlue,
+                                ),
+                                Text(
                                   "Buy Airtime",
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 17,
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                           SizedBox(height: 10),
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.double_arrow,
-                                color: Colors.yellowAccent,
-                              ),
-                              Text(
-                                "Buy Data",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 17,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Buydata()));
+                            },
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.double_arrow,
+                                  color: Colors.yellowAccent,
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  "Buy Data",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           SizedBox(height: 10),
                         ],
@@ -343,36 +367,52 @@ class _TransactionHome extends State<TransactionHome> {
                             ),
                           ),
                           SizedBox(height: 10),
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.sports_soccer_rounded,
-                                color: Colors.greenAccent,
-                              ),
-                              Text(
-                                "Betting",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 17,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Betting()));
+                            },
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.sports_soccer_rounded,
+                                  color: Colors.greenAccent,
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  "Betting",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           SizedBox(height: 10),
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.lightbulb_outlined,
-                                color: Colors.red,
-                              ),
-                              Text(
-                                "Electricity",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 17,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Electricity()));
+                            },
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.lightbulb_outlined,
+                                  color: Colors.red,
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  "Electricity",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           SizedBox(height: 10),
                         ],
